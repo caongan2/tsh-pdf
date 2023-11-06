@@ -93,7 +93,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        if (File::exists($pathPDF)) {
+        if (file_exists($pathPDF)) {
             $headers = ['Content-Type' => 'application/pdf'];
             $response = Response::download($pathPDF, $namePDF, $headers);
     
