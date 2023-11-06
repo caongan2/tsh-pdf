@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Barryvdh\DomPDF\Facade\Pdf;
+// use Barryvdh\DomPDF\Facade\Pdf;
+use PDF;
 use ConvertApi\ConvertApi;
 use Illuminate\Http\Request;
 use Illuminate\Log\Logger;
@@ -49,17 +50,11 @@ class PDFController extends Controller
         ];
         $data = $this->getData($param);
         
-        $options = new Options();
-        $options->set('isHtml5ParserEnabled', true);
-        $dompdf = new Dompdf($options);
-        $html = view('welcome', ['data' => $data])->render();
+        $pdf = PDF::loadView('welcome', ['data' => $data])->setOptions(['no-stop-slow-scripts' => true]);
 
-        $dompdf->loadHtml($html);
 
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-
-        return $dompdf->stream('document.pdf');
+    
+        return $pdf->stream('example.pdf'); 
     }
 
     public function pdf(Request $request)
