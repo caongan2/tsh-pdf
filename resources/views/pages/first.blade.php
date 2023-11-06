@@ -1,6 +1,40 @@
 <div id="pf1" class="pf w0 h0" data-page-no="1">
     <div class="pc pc1 w0 h0 opened">
-    <img src="http://165.22.249.59:8889/bia/7.jpg" alt="" class="bi x0 y0 w1 h1">
+        @switch($path)
+            @case(2)
+                <img src="{{ asset('/bia/2.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(3)
+                <img src="{{ asset('/bia/3.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(4)
+                <img src="{{ asset('/bia/4.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(5)
+                <img src="{{ asset('/bia/5.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(6)
+                <img src="{{ asset('/bia/6.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(7)
+                <img src="{{ asset('/bia/7.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(8)
+                <img src="{{ asset('/bia/8.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(9)
+                <img src="{{ asset('/bia/9.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(10)
+                <img src="{{ asset('/bia/10.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(11)
+                <img src="{{ asset('/bia/11.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+            @case(22)
+                <img src="{{ asset('/bia/22.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                @break
+        @endswitch
         <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['fullName'] }}</div>
         <div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['dateOfBirth'] }}</div>
     </div>
