@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use Dompdf\Dompdf;
 use Dompdf\Options;
-use Illuminate\Http\Response;
 
 
 class PDFController extends Controller
@@ -65,11 +64,7 @@ class PDFController extends Controller
 
     public function pdf(Request $request)
     {
-        $param = [
-            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
-            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
-        ];
-        $data = $this->getData($param);
+        $data = $this->getData($request->all());
         $name = $data['id'] . '-' . $data['dateSearch'] . '.html';
         $namePDF = $data['id'] . '-' . $data['dateSearch'] . '.pdf';
         if (!file_exists(public_path() . '/html/')) {
@@ -93,16 +88,7 @@ class PDFController extends Controller
                 throw $exception;
             }
         }
-        dd($pathPDF);
-        if (file_exists($pathPDF)) {
-            $headers = ['Content-Type' => 'application/pdf'];
-            $response = Response::download($pathPDF, $namePDF, $headers);
-    
-            return $response;
-        } else {
-            // Handle the case where the PDF file does not exist.
-            return response()->json(['error' => 'PDF file not found']);
-        }
+        return response()->json(['path' => asset("/pdf/$namePDF")]);
     }
 
     public function renderPDF(Request $request)
