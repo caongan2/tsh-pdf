@@ -2,37 +2,37 @@
     <div class="pc pc1 w0 h0 opened">
         @switch($path)
             @case(2)
-                <img src="{{ public_path('/bia/2.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/2.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(3)
-                <img src="{{ public_path('/bia/3.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/3.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(4)
-                <img src="{{ public_path('/bia/4.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/4.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(5)
-                <img src="{{ public_path('/bia/5.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/5.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(6)
-                <img src="{{ public_path('/bia/6.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/6.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(7)
-                <img src="{{ public_path('/bia/7.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/7.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(8)
-                <img src="{{ public_path('/bia/8.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/8.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(9)
-                <img src="{{ public_path('/bia/9.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/9.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(10)
-                <img src="{{ public_path('/bia/10.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/10.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(11)
-                <img src="{{ public_path('/bia/11.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/11.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
             @case(22)
-                <img src="{{ public_path('/bia/22.jpg') }}" alt="" class="bi x0 y0 w1 h1">
+                <img src="{{ public_path('bia/22.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
         @endswitch
         <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['fullName'] }}</div>

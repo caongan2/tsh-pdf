@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 // use Barryvdh\DomPDF\Facade\Pdf;
-use PDF;
 use ConvertApi\ConvertApi;
 use Illuminate\Http\Request;
 use Illuminate\Log\Logger;
@@ -16,6 +15,7 @@ use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Storage;
 use Dompdf\Dompdf;
 use Dompdf\Options;
+use PDF;
 
 
 class PDFController extends Controller
@@ -50,11 +50,11 @@ class PDFController extends Controller
         ];
         $data = $this->getData($param);
         
-        $pdf = PDF::loadView('welcome', ['data' => $data])->setOptions(['no-stop-slow-scripts' => true]);
+        $pdf = PDF::loadView('welcome', ['data' => $data]);
 
 
     
-        return $pdf->stream('example.pdf'); 
+        return $pdf->download('example.pdf'); 
     }
 
     public function pdf(Request $request)
