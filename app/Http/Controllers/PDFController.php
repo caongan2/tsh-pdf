@@ -27,6 +27,28 @@ class PDFController extends Controller
         ];
         $data = $this->getData($param);
         
+        // $options = new Options();
+        // $options->set('isHtml5ParserEnabled', true);
+        // $dompdf = new Dompdf($options);
+        return view('welcome', ['data' => $data]);
+        // $html = view('welcome', ['data' => $data])->render();
+
+        // $dompdf->loadHtml($html);
+
+        // $dompdf->setPaper('A4', 'portrait');
+        // $dompdf->render();
+
+        // return $dompdf->stream('document.pdf');
+    }
+
+    public function down(Request $request)
+    {
+        $param = [
+            'url' => 'https://api.tracuuthansohoconline.com/api/user/look-up/f20800d5-353d-4960-9549-8c7e4c0d49b4',
+            'token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5ODQyNjkxMSwiZXhwIjoxNzAxMDE4OTExfQ.2104C_aMaf-OniN2wXUZFoVsetB1dczV4uU-bBnndU8'
+        ];
+        $data = $this->getData($param);
+        
         $options = new Options();
         $options->set('isHtml5ParserEnabled', true);
         $dompdf = new Dompdf($options);
