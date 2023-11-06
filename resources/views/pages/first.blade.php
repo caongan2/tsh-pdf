@@ -35,7 +35,7 @@
                 <img src="{{ asset('/bia/22.jpg') }}" alt="" class="bi x0 y0 w1 h1">
                 @break
         @endswitch
-        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['fullName'] }}</div>
+        <div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">{{ asset('/bia/2.jpg') }}</div>
         <div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">{{ $data['dateOfBirth'] }}</div>
     </div>
     <div class="pi" data-data="{&quot;ctm&quot;:[1.500000,0.000000,0.000000,1.500000,0.000000,0.000000]}"></div>
@@ -43,7 +43,7 @@
 <div id="pf2" class="pf w0 h0" data-page-no="2">
     <div class="pc pc2 w0 h0 opened">
         <img class="bi x0 y0 w1 h1" alt="" src="{{ asset('/'.$path.'/page.png') }}">
-        <div class="t m0 x4 h2 y4 ff1 fs0 fc2 sc0 ls0 ws0">Mục lục</div>
+        <div class="t m0 x4 h2 y4 ff1 fs0 fc2 sc0 ls0 ws0">{{ asset('/bia/2.jpg') }}</div>
         <div class="t m0 x5 h4 y5 ff1 fs2 fc2 sc0 ls0 ws0">Mục<span class="_ _0"> </span>Trang</div>
         <div class="t m0 x5 h4 y6 ff1 fs2 fc2 sc0 ls0 ws0">CHÀO MỪNG BẠN ĐẾN VỚI BÁO CÁO CỦA TRA CỨU THẦN SỐ HỌC<span class="_ _1"></span><span class="ff2">........................................................</span></div><div class="t m0 x6 h5 y7 ff2 fs2 fc2 sc0 ls0 ws0">2</div>
         <div class="t m0 x5 h4 y8 ff1 fs2 fc2 sc0 ls0 ws0">HIỂU VỀ BẢN BÁO CÁO CỦA BẠN<span class="_ _2"></span><span class="ff2">...................................................................................................................</span></div><div class="t m0 x6 h5 y9 ff2 fs2 fc2 sc0 ls0 ws0">4</div>
